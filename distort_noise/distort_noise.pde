@@ -12,7 +12,6 @@ void setup() {
       rect(x, y, x, y);
     }
   }
-  save("insanelywarpedFullscreen.png");
 }
 
 color warp(float x, float y) { 
