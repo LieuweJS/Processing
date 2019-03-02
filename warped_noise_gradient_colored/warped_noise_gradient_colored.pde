@@ -1,6 +1,9 @@
 //takes a while to load
+int gradientStart = 99;
+int gradientEnd = 230;
 void setup() {
-  size(displayWidth,displayHeight);
+  size(800,500);
+  //size(displayWidth,displayHeight);
   colorMode(HSB);
   for(int y=0; y<height; y++) {
     for(int x=0; x<width; x++) {
@@ -16,8 +19,9 @@ color warp(float x, float y) {
   float warp1 = noise(x + 1, y + 2);//first warp
   float warp2 = noise(x + 4 * warp1, y + 4 * warp1 + 3);//second warp
   float warp3 = noise(x + 4 * warp2, y + 4 * warp2 + 6);//third warp
-  color Color = color((warp3*360),360,360); 
-  return color(Color);   
+  int hue = round(warp3 * 360);
+  int Color = round(map(hue,0,360,gradientStart,gradientEnd));
+  return color(Color,360,360);   
 } 
 
 /*
