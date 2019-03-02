@@ -19,8 +19,7 @@ color warp(float x, float y) {
   float warp1 = noise(x + 1, y + 2);//first warp
   float warp2 = noise(x + 4 * warp1, y + 4 * warp1 + 3);//second warp
   float warp3 = noise(x + 4 * warp2, y + 4 * warp2 + 6);//third warp
-  int hue = round(warp3 * 360);
-  int Color = round(map(hue,0,360,gradientStart,gradientEnd));
+  int Color = round(map(warp3,0,1,gradientStart,gradientEnd));
   return color(Color,360,360);   
 } 
 
