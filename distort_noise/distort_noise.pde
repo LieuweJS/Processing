@@ -23,6 +23,6 @@ color warp(float x, float y) {
 } 
 
 /*
-warp distorts the noise field, so it looks a lot more interesing, 
-for a more detailed explenation see: http://www.nolithius.com/articles/world-generation/world-generation-techniques-domain-warping
+warp distorts the noise field, so it looks a lot more interesing. 
+for a more detailed explanation see: http://www.nolithius.com/articles/world-generation/world-generation-techniques-domain-warping
 */
