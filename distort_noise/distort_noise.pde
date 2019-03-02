@@ -3,7 +3,6 @@ int b = round(random(255));
 void setup() {
   //size(400,400);
   size(displayWidth,displayHeight);
-  colorMode(RGB);
   for(int y=0; y<height; y++) {
     for(int x=0; x<width; x++) {
       color b = warp(x*0.01,y*0.01);
