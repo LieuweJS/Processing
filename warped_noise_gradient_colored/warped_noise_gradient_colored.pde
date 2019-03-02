@@ -1,9 +1,8 @@
 //takes a while to load
-int gradientStart = 99;
-int gradientEnd = 230;
+int gradientStart = 0;
+int gradientEnd = 50;
 void setup() {
-  size(800,500);
-  //size(displayWidth,displayHeight);
+  size(displayWidth,displayHeight);
   colorMode(HSB);
   for(int y=0; y<height; y++) {
     for(int x=0; x<width; x++) {
