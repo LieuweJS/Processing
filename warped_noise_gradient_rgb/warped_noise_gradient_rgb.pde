@@ -4,8 +4,9 @@ int g = round(random(255));
 int b = round(random(255));
 color gradientStart = color(100,55,33); //100,55,33 is great
 void setup() {
-  //size(400,200);
-  size(displayWidth,displayHeight);
+  //git status
+  size(400,200);
+  //size(displayWidth,displayHeight);
   for(int y=0; y<height; y++) {
     for(int x=0; x<width; x++) {
       color Color = warp(x*0.01,y*0.01);
@@ -20,7 +21,6 @@ color warp(float x, float y) {
   //warps
   float warpX1 = noise(x + 1, y + 1);
   float warpY1 = noise(x + 2, y + 2);
-  
   float warpX2 = noise(x + 4 * warpX1, y + 4 * warpY1);
   float warpY2 = noise(x + 5 * warpX1, y + 5 * warpY1);
   float warpX3 = noise(x + 4 * warpX2, y + 4 * warpY2);
