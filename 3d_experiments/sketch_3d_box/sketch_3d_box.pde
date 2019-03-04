@@ -12,8 +12,8 @@ void draw() {
  fill(Color);
  translate(width/2, height/2);
  rotateX(x);
- rotateY(x);
+ rotatseY(y);
  box(round(noise(x)*200));
  x = x + 0.01;
- y = y + 0.01;
+ y = y + 0.02;
 }
