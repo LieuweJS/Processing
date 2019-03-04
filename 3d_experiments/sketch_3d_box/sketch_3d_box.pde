@@ -1,3 +1,4 @@
+//the perfect screensaver?
 float x = 0.0;
 float y = 0.0;
 void setup() {
@@ -12,7 +13,7 @@ void draw() {
  translate(width/2, height/2);
  rotateX(x);
  rotateY(x);
- box(100);
+ box(round(noise(x)*200));
  x = x + 0.01;
  y = y + 0.01;
 }
