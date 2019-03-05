@@ -9,7 +9,6 @@ void setup() {
   rotateX(radians(35));
   endCamera();
   getNoiseLandscape();
-  
 }
 
 void getNoiseLandscape() {
