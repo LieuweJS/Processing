@@ -1,6 +1,6 @@
 float scale = 1.0;
 float increment = 0.015 * scale;
-int maxHeight = round(random(100));
+int maxHeight = round(random(1000));
 
 int R = round(random(255));
 int G = round(random(255));
