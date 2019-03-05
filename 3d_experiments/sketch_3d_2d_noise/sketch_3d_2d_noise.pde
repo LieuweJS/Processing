@@ -3,7 +3,7 @@ float increment = 0.015 * scale;
 int maxHeight = 50;
 
 void setup() {
- size(800,600,P3D);
+ size(displayWidth,displayHeight,P3D);
  beginCamera();
  camera();
  rotateX(0.75);
