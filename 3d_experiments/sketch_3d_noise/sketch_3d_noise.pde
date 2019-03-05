@@ -1,30 +1,52 @@
-FloatList heightMap;
-float increment = 0.015;
+float rotation= 0;
+int totalAddTo = 0;
+float scale = 2.0;
+float increment = 0.015 * scale;
+int total = 0;
+
+int maxHeight = 50;
 
 void setup() {
- size(800,400,P3D);
+ size(800,600,P3D);
+    beginCamera();
+camera();
+//rotateY(1);
+rotateX(1);
+//rotateZ(-0.5);
+endCamera();
+ lights();
  getNoiseLandscape();
- println(heightMap);
 }
+// middle of the box is taken in translate and in box for position
+float[] heightMap = new float[64000000];
+float xPos = width/2;
+float yPos = height/4;
 
-void draw() {
- 
-}
-
-void getNoiseLandscape() {
- loadPixels();
- noiseDetail(10,0.4);
- heightMap = new FloatList();
+void getNoiseLandscape() {;
+ noiseDetail(10,0.5);
  float xOff = 0;
- for(int x = 0; x < width; x++) {
+ for(int x = 0; x < width; x += scale) {
    xOff += increment;
    float yOff = 0;
-   for(int y = 0; y < height; y++) {
+   for(int y = 0; y < height/2; y += scale) {
    yOff += increment;
-   float noise = noise(xOff, yOff);
-   pixels[x+y*width] = color(noise * 255);
-   heightMap.append(round(noise * 100));
+   float noise = noise(xOff * scale, yOff * scale);
+   heightMap[totalAddTo] = round(noise * maxHeight);
+   totalAddTo += 1;
    }
  } 
- updatePixels();
+ for(int y = 0; y < height/2; y += scale) {
+    for(int x = 0; x < width; x += scale) {
+      noStroke();
+      pushMatrix();
+      translate(xPos,yPos,-100);
+      box(scale,scale,heightMap[total]);
+      popMatrix();
+      total += 1;
+      xPos += scale;
+    }
+    xPos = 0.0;
+    yPos += scale;
+  }
+  yPos = 0.0;
 }
