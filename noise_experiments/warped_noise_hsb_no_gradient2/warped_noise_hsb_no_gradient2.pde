@@ -8,8 +8,8 @@ void setup() {
   for(int y=0; y<height; y++) {
     for(int x=0; x<width; x++) {
       color Color = warp(x*0.0105,y*0.01);
-      fill(Color);
-      stroke(Color);
+      noStroke();
+      fill(Color);     
       rect(x, y, x, y);
     }
   }
