@@ -3,21 +3,18 @@ int totalAddTo = 0;
 float scale = 2.0;
 float increment = 0.015 * scale;
 int total = 0;
-
 int maxHeight = 50;
 
 void setup() {
  size(800,600,P3D);
-    beginCamera();
-camera();
-//rotateY(1);
-rotateX(1);
-//rotateZ(-0.5);
-endCamera();
+ beginCamera();
+ camera();
+ rotateX(1);
+ endCamera();
  lights();
  getNoiseLandscape();
 }
-// middle of the box is taken in translate and in box for position
+
 float[] heightMap = new float[64000000];
 float xPos = width/2;
 float yPos = height/4;
