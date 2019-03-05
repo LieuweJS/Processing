@@ -7,10 +7,6 @@ int G = round(random(255));
 int B = round(random(255));
 color gradientStart = color(R,G,B);
 
-int randCol = round(random(240));
-int randSat = round(random(70));
-int randBright = round(random(90));
-
 void setup() {
   size(displayWidth,displayHeight,P3D);
   beginCamera();
