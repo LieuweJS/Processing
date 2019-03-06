@@ -1,6 +1,7 @@
-float scale = 5.0;
+float scale = 1.0;
 float increment = 0.02 * scale;
-int maxHeight = round(random(100));
+int maxHeight = round(random(250));
+float minHeight = 0.3;
 color Color;
 int boxHeight;
 color gradientStart = color(0,255,0);
@@ -12,7 +13,6 @@ void setup() {
   endCamera();
   lights();
   getNoiseLandscape();
-  lights();
 }
 
 
@@ -27,6 +27,9 @@ void getNoiseLandscape() {
       float warpY2 = noise(xWarp + 4 * warpX1, yWarp + 4 * warpY1);
       float warpX3 = noise(xWarp + 5 * warpX2, yWarp + 5 * warpY2);
       if (warpX3 * 100 < 30) {
+        if(warpX3 * 100 < minHeight * 100) {
+          minHeight = warpX3;
+        }
         Color = color(0,0,200); 
         boxHeight = round(0.3*maxHeight);
       } else {
@@ -41,8 +44,8 @@ void getNoiseLandscape() {
       noStroke();
       pushMatrix();
       fill(Color);
-      translate(x+width/4,y+height/4,(warpX3 * maxHeight)/2);  
-      box(scale,scale,boxHeight);
+      translate(x+width/4,y+height/4,boxHeight/2);  
+      box(scale,scale,boxHeight-(round((minHeight * maxHeight))));
       popMatrix(); 
     }
   }
