@@ -1,10 +1,10 @@
 float scale = 1.0;
 float increment = 0.02 * scale;
-int maxHeight = round(random(250));
+int maxHeight = round(random(500));
 float minHeight = 0.3;
 color Color;
 int boxHeight;
-color gradientStart = color(50, 240, 43);
+color gradientStart = color(40, 240, 23);
 
 void setup() {
   size(displayWidth,displayHeight,P3D);
