@@ -16,7 +16,6 @@ void setup() {
   getNoiseLandscape();
 }
 
-
 void getNoiseLandscape() {
   for(int y=0; y<height/2; y+=scale) {
     for(int x=0; x<width/2; x+=scale) {
