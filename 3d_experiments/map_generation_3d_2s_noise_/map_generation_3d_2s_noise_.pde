@@ -4,7 +4,7 @@ int maxHeight = round(random(250));
 float minHeight = 0.3;
 color Color;
 int boxHeight;
-color gradientStart = color(0,255,0);
+color gradientStart = color(96, 240, 56);
 
 void setup() {
   size(displayWidth,displayHeight,P3D);
@@ -31,7 +31,7 @@ void getNoiseLandscape() {
         if(warpX3 * 100 < minHeight * 100) {
           minHeight = warpX3;
         }
-        Color = color(0,0,200); 
+        Color = color(15,94,240); 
         boxHeight = round(0.3*maxHeight);
       } else {
         color gradientEnd = color(warpX1*255,warpY1*255,warpX2*255);
