@@ -5,6 +5,7 @@ float minHeight = 0.3;
 color Color;
 int boxHeight;
 color gradientStart = color(0,255,0);
+
 void setup() {
   size(displayWidth,displayHeight,P3D);
   beginCamera();
