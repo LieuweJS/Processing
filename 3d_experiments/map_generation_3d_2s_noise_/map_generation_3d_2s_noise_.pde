@@ -4,7 +4,7 @@ int maxHeight = round(random(250));
 float minHeight = 0.3;
 color Color;
 int boxHeight;
-color gradientStart = color(96, 240, 56);
+color gradientStart = color(50, 240, 43);
 
 void setup() {
   size(displayWidth,displayHeight,P3D);
