@@ -1,5 +1,5 @@
 # Processing
-experimenting with processing 
+Experimenting with processing and using it to make art (with Perlin Noise).
 
 
-march 2019
+March 2019
