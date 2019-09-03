@@ -20,12 +20,12 @@ void getNoiseLandscape() {;
    float yOff = 0;
    for(int y = 0; y < height; y += scale) {
      yOff += increment;
-     float noise = noise(xOff, yOff);
+     float Noise = noise(xOff, yOff);
      noStroke();
      pushMatrix();
-     fill(noise*255);
-     translate(x,y,round(noise*maxHeight)/2);
-     box(scale,scale,round(noise * maxHeight));
+     fill(Noise*255);
+     translate(x,y,round(Noise*maxHeight)/2);
+     box(scale,scale,round(Noise * maxHeight));
      popMatrix();
    }
  } 
